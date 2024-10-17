@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-import daisyui from './node_modules/daisyui'
+// import daisyui from './node_modules/daisyui'
+// import tailwind_typography from './node_modules/@tailwindcss/typography'
 export default {
   content: [
     "./index.html",
@@ -13,7 +14,9 @@ export default {
   },
   plugins: [
     // require("daisyui"),
-    daisyui
+    // daisyui,
+    require('@tailwindcss/typography'),
+    require('daisyui')
   ],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
