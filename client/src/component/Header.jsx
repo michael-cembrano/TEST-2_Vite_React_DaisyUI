@@ -39,9 +39,6 @@ const Header = () => {
                 <a href="/about">About</a>
               </li>
               <li>
-                <a href="/experience">Experience</a>
-              </li>
-              <li>
                 <a href="/projects">Projects</a>
               </li>
               <li>
@@ -50,7 +47,9 @@ const Header = () => {
             </ul>
           )}
         </div>
-        <a className="btn btn-ghost text-xl">Portfolio</a>
+        <a href="/" className="btn btn-ghost text-xl hover:bg-base-200">
+          Portfolio
+        </a>
       </div>
 
       <div className="navbar-center hidden lg:flex">
@@ -63,11 +62,6 @@ const Header = () => {
           <li>
             <a href="/about" className="hover:text-primary">
               About
-            </a>
-          </li>
-          <li>
-            <a href="/experience" className="hover:text-primary">
-              Experience
             </a>
           </li>
           <li>
