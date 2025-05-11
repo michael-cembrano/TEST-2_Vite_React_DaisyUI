@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [email, setEmail] = useState("");
+  // const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +16,7 @@ const Footer = () => {
 
   return (
     <footer className="footer bg-base-200 text-base-content p-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
       <nav className="space-y-3">
         <h6 className="footer-title">Quick Links</h6>
         <a
@@ -77,33 +80,36 @@ const Footer = () => {
           About
         </a>
       </nav>
-
       <nav className="space-y-3">
         <h6 className="footer-title">Connect</h6>
         <div className="grid grid-flow-col gap-4">
-          {[
-            { icon: "github", url: "https://github.com/yourusername" },
-            { icon: "linkedin", url: "https://linkedin.com/in/yourusername" },
-            { icon: "twitter", url: "https://twitter.com/yourusername" },
-          ].map(({ icon, url }) => (
-            <a
-              key={icon}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-ghost btn-square hover:text-primary transition-colors"
-            >
-              <img
-                src={`https://api.iconify.design/mdi/${icon}.svg`}
-                className="w-6 h-6"
-                alt={icon}
-              />
-            </a>
-          ))}
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost btn-square hover:text-primary transition-colors"
+          >
+            <FaGithub className="w-6 h-6" />
+          </a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost btn-square hover:text-primary transition-colors"
+          >
+            <FaLinkedin className="w-6 h-6" />
+          </a>
+          <a
+            href="https://x.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost btn-square hover:text-primary transition-colors"
+          >
+            <FaXTwitter className="w-6 h-6" />
+          </a>
         </div>
       </nav>
-
-      <form onSubmit={handleSubmit} className="w-full md:w-80">
+      {/* <form onSubmit={handleSubmit} className="w-full md:w-80">
         <h6 className="footer-title">Stay Updated</h6>
         <fieldset className="form-control w-full">
           <label className="label">
@@ -129,11 +135,12 @@ const Footer = () => {
             </button>
           </div>
         </fieldset>
-      </form>
+      </form> */}
+      </div>
 
-      <div className="footer footer-center pt-8 mt-8 border-t border-base-300">
+      <div className="w-full flex justify-end pt-8 mt-8 border-t border-base-content/0">
         <p className="text-base-content/70">
-          © {new Date().getFullYear()} Your Name - Built with React & DaisyUI
+          © {new Date().getFullYear()} Michael Cembrano - Built with React & DaisyUI
         </p>
       </div>
     </footer>

@@ -41,9 +41,9 @@ const Home = () => {
           </div>
           <div className="lg:mr-8">
             <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent animate-fade-in">
-              Your Name
+              Michael Cembrano
             </h1>
-            <p className="py-6 text-xl">Full Stack Developer</p>
+            <p className="py-6 text-xl">SAP MM/IM Consultant and Freelance Full Stack Developer</p>
             <p className="pb-6 text-base-content/70">
               Passionate about creating beautiful and functional web
               applications with modern technologies.
